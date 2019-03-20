@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+
+    <!-- link to Materialize CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- firebase reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+
+    <!-- link to jQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- link to Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+
+</head>
+<body>
+    
+    <table id="train-table">
+        <tr>
+            <th>Name</th>
+            <th>Destination</th>
+            <th>First Train</th>
+            <th>Frequency</th>
+            <th>Next Arrival</th>
+            <th>Minutes Away</th>
+        </tr>
+        <tr>
+            <td>Fake train</td>
+            <td>Fake Destination</td>
+            <td>08:00</td>
+            <td>30</td>
+            <td>09:00</td>
+            <td>20</td>
+
+        </tr>
+    </table>
+
+
+    <h1>Add Train</h1>
+    <form id="add-train">
+        <input type="text" placeholder="name" id="name" required> 
+        <input type="text" placeholder="destination" id="destination" required>
+        <input type="text" placeholder="first train time example 08:00" id="first-train" required>
+        <input type="text" placeholder="frequency" id="frequency" required>
+        <button type="submit">add</button>
+    </form>
+    
+    <script src="scheduler.js"></script>
+</body>
+</html>
+
+<style>
+th, td{
+    border: 1px solid gray;
+}
+
+</style>
+
